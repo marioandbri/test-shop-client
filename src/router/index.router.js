@@ -1,4 +1,5 @@
 import { pages } from "../controllers";
+import Loading from "../views/loading.html";
 
 const app = document.getElementById("app");
 const search = document.getElementById("search");
@@ -10,7 +11,7 @@ export const router = async (router) => {
 	searchButton.onclick = async () => {
 		const destination = "/#/search=" + input.value;
 		window.history.pushState({}, "", destination);
-		app.innerHTML = "<h1 id='loading'>Loading...</h1>";
+		app.innerHTML = Loading;
 		return app.appendChild(await pages.search(input.value));
 	};
 	let query;
@@ -28,11 +29,11 @@ export const router = async (router) => {
 			console.log("home!!");
 			return app.appendChild(pages.home());
 		case "#/products":
-			app.innerHTML = "<h1 id='loading'>Loading...</h1>";
+			app.innerHTML = Loading;
 			return app.appendChild(await pages.products(query));
 		case "#/search":
 			console.log(query);
-			app.innerHTML = "<h1 id='loading'>Loading...</h1>";
+			app.innerHTML = Loading;
 			return app.appendChild(await pages.search(query));
 	}
 };

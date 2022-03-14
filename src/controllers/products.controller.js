@@ -3,17 +3,18 @@ import productsView from "../views/products.html";
 // import placeholder from "../assets/default-product-image.png";
 // import { getDiscountedPrice } from "../helpers/getDiscountedPrice";
 import { renderProduct } from "../helpers/renderProducts";
+import { server } from "../constants";
 
 const getProducts = async () => {
-	const response = await fetch("http://localhost:4000/api/products");
+	const response = await fetch(`http://${server}/api/products`);
 	return await response.json();
 };
 const getCategories = async () => {
-	const response = await fetch("http://localhost:4000/api/category");
+	const response = await fetch(`http://${server}/api/category`);
 	return await response.json();
 };
 const getProductsByCategories = async (query) => {
-	const response = await fetch(`http://localhost:4000/api/category/${query}`);
+	const response = await fetch(`http://${server}/api/category/${query}`);
 	return await response.json();
 };
 

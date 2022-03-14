@@ -9,5 +9,8 @@ window.addEventListener("hashchange", () => {
 });
 
 window.onload = () => {
+	if (!window.location.hash) {
+		window.location.replace(window.location + "#/");
+	}
 	router(window.location.hash);
 };
