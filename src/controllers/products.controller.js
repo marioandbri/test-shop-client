@@ -25,7 +25,7 @@ import { server } from "../constants";
  * @returns {Product[]} Array de productos
  */
 const getProducts = async () => {
-	const response = await fetch(`http://${server}/api/products`);
+	const response = await fetch(`https://${server}/api/products`);
 	return await response.json();
 };
 
@@ -34,7 +34,7 @@ const getProducts = async () => {
  * @returns {Category[]}
  */
 const getCategories = async () => {
-	const response = await fetch(`http://${server}/api/category`);
+	const response = await fetch(`https://${server}/api/category`);
 	return await response.json();
 };
 
@@ -44,7 +44,7 @@ const getCategories = async () => {
  * @returns {{Category:Product[]}} El objeto categoria con el array de productos
  */
 const getProductsByCategories = async (query) => {
-	const response = await fetch(`http://${server}/api/category/${query}`);
+	const response = await fetch(`https://${server}/api/category/${query}`);
 	return await response.json();
 };
 

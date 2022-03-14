@@ -8,7 +8,9 @@ import productsView from "../views/search-results.html";
  * @returns {import("./products.controller").Product[]} Arreglo de productos resultado
  */
 const queryProducts = async (query) => {
-	const response = await fetch(`http://${server}/api/products/search=${query}`);
+	const response = await fetch(
+		`https://${server}/api/products/search=${query}`
+	);
 	return await response.json();
 };
 
