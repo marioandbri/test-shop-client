@@ -7,6 +7,7 @@ import "regenerator-runtime/runtime.js";
 window.addEventListener("hashchange", () => {
 	router(window.location.hash);
 });
+
 window.onload = () => {
 	router(window.location.hash);
 };

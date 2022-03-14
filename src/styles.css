@@ -69,3 +69,12 @@ div.btn.btn-secondary.product-price {
 		gap: 0.5em;
 	}
 }
+
+.categories-dropdown {
+	margin-top: 2em;
+	margin-left: 1em;
+}
+
+.category-item {
+	text-transform: capitalize;
+}
