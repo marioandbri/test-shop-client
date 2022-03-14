@@ -3,3 +3,4 @@ node_modules
 yarn-error.log
 Dockerfile
 babel.config.json
+jsdoc.config.json
