@@ -9,7 +9,7 @@ import { getDiscountedPrice } from "../helpers/getDiscountedPrice";
  */
 export const renderProduct = (product, productsContainer) => {
 	productsContainer.innerHTML += `
-  <div class="card grid-item" style="width: 18rem;">
+  <div class="card grid-item">
 <img src=${
 		product?.url_image ? product.url_image : new URL(placeholder)
 	} class="card-img-top" alt="...">
